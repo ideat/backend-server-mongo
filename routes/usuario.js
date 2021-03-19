@@ -19,7 +19,7 @@ app.get('/', (req, res, next) => {
     var desde = req.query.desde || 0;
     desde = Number(desde);
 
-    Usuario.find({}, 'nombre email img role')  
+    Usuario.find({}, 'nombre email img role google')  
         .skip(desde)
         .limit(5)
         .exec(
@@ -105,7 +105,7 @@ app.put('/:id',  mdAutenticacion.verficaToken, (req,res) =>{
 //Crear un nuevo usuario
 //=============================
 
-app.post('/', mdAutenticacion.verficaToken, (req,res) => {
+app.post('/',  (req,res) => {  //mdAutenticacion.verficaToken,
    
     var body = req.body;
 

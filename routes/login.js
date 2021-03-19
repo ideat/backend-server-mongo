@@ -148,6 +148,8 @@ app.post('/', (req, res) =>{
             }
         }
 
+        
+
         if (!bcrypt.compareSync ( body.password, usuarioBD.password)){
             return res.status(400).json({
                 ok: false,

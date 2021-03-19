@@ -108,7 +108,7 @@ function subirPorTipo( tipo, id, nombreArchivo, res){
 
             usuario.save(( err, usuarioActualizado) =>{
 
-                usuarioActualizado = ':)';
+                usuarioActualizado.password = ':)';
 
                return res.status(200).json({
                     ok: true,
