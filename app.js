@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 // var cors = require('cors');
 
 //Inicializar variables
-var app = express();
+const app = express();
 
 //CORS
 // app.use(cors());
